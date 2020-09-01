@@ -1,0 +1,115 @@
+#main-login-page{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+} 
+
+#main-login-page img{
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+        
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+        
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+      
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    #main-login-page img {
+        left: 50%;
+        margin-left: -512px;   /* 50% */
+    }
+}
+
+#fake-form-background{
+    position:absolute;
+    z-index:1;
+    width: 400px;
+    height: 600px;
+    background: linear-gradient(0deg, rgba(16, 137, 255, 0.2), rgba(16, 137, 255, 0.5)), linear-gradient(180deg, rgba(0, 0, 128, 0.6) 0%, #000000 63.02%);
+    mix-blend-mode: multiply ;
+}
+
+#form-login-page{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    position:absolute;
+    z-index: 30;
+    width: 400px;
+    height: 600px;
+    background: none;
+}
+
+#form-login-page #img-logo{
+    width: 150px;
+    height: 150px;
+    background:url('../../assets/images/icons/logo.png')
+}
+
+#form-login-page p{
+    box-sizing: border-box;
+    border: 1px solid #FF6961;
+    border-radius:0.8rem;
+    width:80%;
+    padding:1rem;
+    font: 400 1rem Montserrat;
+    font-weight: bold;
+    background:#0B0A08;
+    color:#FF6961;
+    margin-top:5rem;
+    margin-bottom:0rem;
+}
+
+#form-login-page input{
+    width: 80%;
+    height: 4rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-top:1rem;
+    box-sizing: border-box;
+    border: 1px solid #eeeeee;
+    border-radius: 0.8rem;
+    color:'#eeeeee';
+    transition: border 0.8s;
+    font: 400 1.4rem Montserrat;
+}
+
+#form-login-page input + input{
+    margin-top:10px
+}
+
+#form-login-page input:focus {
+    border: 3px solid #1089ff;
+}
+
+#form-login-page button{
+    margin-top: 25px;
+    padding:10px;
+    width:80%;
+    font: 600 1.6rem Poppins;
+    
+    border:2px solid #1089ff;
+    background:#0B0A08;
+    color:#1089ff;
+    transition: background 0.4s;
+    cursor:pointer;
+}
+#form-login-page button:hover{
+    background: #454645;
+}
+    
+@media (min-width:1100px){
+    #form-login-page,
+    #fake-form-background{
+        width: 657px;
+        height: 713px;
+    }
+}

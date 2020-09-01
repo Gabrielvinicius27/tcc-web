@@ -1,0 +1,11 @@
+#main{
+    display:flex;
+    flex-direction: row;
+}
+#screen{
+    width: auto;
+}
+h1{
+   background: #0B0A08;
+   color:#1089ff;
+}

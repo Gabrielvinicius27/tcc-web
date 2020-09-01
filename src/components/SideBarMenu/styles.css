@@ -1,0 +1,69 @@
+.main{
+    display:flex;
+    flex-direction: row;
+}
+.hidded-side-bar{
+    background:#0B0A08;
+    width:24px;
+    height:100vh;
+}
+.sidebar{
+    min-width: 200px;
+    width:240px;
+    max-width: 240px;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background:#0B0A08;
+    margin:0;
+}
+.item{
+    background:#0B0A08;
+    color:#1089ff;
+    border-bottom: 1px solid #1089ff;
+}
+.item-text{
+    font: 400 1.5rem Montserrat;
+    font-weight: bold;
+}
+.sub-item{
+    background:#454645;
+    color:#1089ff;
+}
+.sub-item-text{
+    font: 400 1rem Montserrat;
+    
+}
+.button{
+    display: flex;
+    width: 50px;
+    height: 48px;
+    align-items: left;
+    
+    border: none;
+    border-radius: 0.8rem;
+    
+}
+.show{
+    margin:0;
+    width: 40%;
+    height: 50px;
+    border-radius: 0.8rem;
+    background: url("../../assets/images/icons/showSideBarMenu.png");
+    transition: width 0.2s;
+    cursor:pointer;
+}
+.show:hover{
+    width:100%
+}
+.hide{
+    margin:0;
+    width: 40%;
+    height: 50px;
+    border-radius: 0.8rem;
+    background: url("../../assets/images/icons/hideSideBarMenu.png");
+    transition: width 0.2s;
+    cursor: pointer;
+}
+.hide:hover{
+    width:100%
+}
