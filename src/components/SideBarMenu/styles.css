@@ -1,10 +1,10 @@
-.main{
+.mainSideBarMenu{
     display:flex;
     flex-direction: row;
 }
 .hidded-side-bar{
-    background:#0B0A08;
-    width:24px;
+    background:#1167B1;
+    width:0px;
     height:100vh;
 }
 .sidebar{
@@ -13,21 +13,26 @@
     max-width: 240px;
     height: 100vh;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background:#0B0A08;
+    background:#1167B1;
     margin:0;
 }
 .item{
-    background:#0B0A08;
-    color:#1089ff;
-    border-bottom: 1px solid #1089ff;
+    background:#1167B1;
+    color:#eeeeee;
+    height: 46px;
+    border-bottom: 0px solid #1089ff;
+    transition: background 0.5s
+}
+.item:hover{
+    background:#1E1E2C
 }
 .item-text{
-    font: 400 1.5rem Montserrat;
+    font: 400 1.2rem Montserrat;
     font-weight: bold;
 }
 .sub-item{
-    background:#454645;
-    color:#1089ff;
+    background:#187bcd;
+    color:#eeeeee;
 }
 .sub-item-text{
     font: 400 1rem Montserrat;
@@ -38,32 +43,41 @@
     width: 50px;
     height: 48px;
     align-items: left;
-    
     border: none;
-    border-radius: 0.8rem;
-    
+    border-radius: 0.2rem;
 }
 .show{
     margin:0;
     width: 40%;
-    height: 50px;
-    border-radius: 0.8rem;
+    height: 47px;
+    border-bottom-right-radius: 0.3rem;
     background: url("../../assets/images/icons/showSideBarMenu.png");
     transition: width 0.2s;
     cursor:pointer;
+    background-size: 52px 50px;
+    background-position: -1px -1px;
 }
 .show:hover{
     width:100%
 }
 .hide{
-    margin:0;
     width: 40%;
-    height: 50px;
-    border-radius: 0.8rem;
+    height: 47px;
+    border: 10px;
+    border-bottom-right-radius: 0.3rem;
     background: url("../../assets/images/icons/hideSideBarMenu.png");
     transition: width 0.2s;
     cursor: pointer;
+    background-size: 52px 50px;
+    background-position: -1px -1px;
 }
 .hide:hover{
     width:100%
+}
+@media screen and (max-width: 700px){
+    .mainSideBarMenu{
+        position: absolute;
+        z-index: 2;
+    }
+    
 }

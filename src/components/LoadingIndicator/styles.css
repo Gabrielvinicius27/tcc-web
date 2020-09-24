@@ -1,0 +1,19 @@
+.loadingIndicator{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background-color: #eeeeee;
+    border:0px solid #000000;
+    border-radius:0.8rem;
+    position: absolute;
+    z-index: 2;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 150px;
+    width: 300px;
+}

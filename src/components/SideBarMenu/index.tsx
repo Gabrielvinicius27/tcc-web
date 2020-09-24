@@ -3,6 +3,7 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import "./styles.css"
+import { useHistory } from 'react-router-dom';
 
 interface itemProps{
     data: Array<itemType>;
@@ -15,6 +16,7 @@ interface itemType{
 interface subItemType{
     name:string;
     label:string;
+    path:string;
     fatherIndex?:number;
 }
 
@@ -28,8 +30,9 @@ const SideBarMenu: React.FC<itemProps> = ({data,...rest}) => {
     }
 
     const [hidden, setHidden] = useState(list);
-    const [show, setShow] = useState(true);
-    
+    const [show, setShow] = useState(false);
+    const history = useHistory();
+
     const toggleFunction = (position:number) => {
         const newArray = hidden.map((item,index)=>{
             if(index===(position)){
@@ -44,8 +47,13 @@ const SideBarMenu: React.FC<itemProps> = ({data,...rest}) => {
         setShow(!show);
     }
 
+    const routeTo = (path:string) => {
+        history.push(path);
+        window.location.reload();
+    }
+
     return (
-        <main className="main">
+        <main className="mainSideBarMenu">
             {show?(<div className="sidebar">
                 <List disablePadding dense>
                     {data.map((item, index)=>{
@@ -62,7 +70,7 @@ const SideBarMenu: React.FC<itemProps> = ({data,...rest}) => {
                                         {item.items.map((subItem)=>{
                                             return(
                                                 <div className="sub-item">
-                                                    <ListItem key={subItem.name} button>
+                                                    <ListItem key={subItem.name} button onClick = {(e) => routeTo(subItem.path)}>
                                                         <ListItemText><span className="sub-item-text">{subItem.label}</span></ListItemText>
                                                     </ListItem>
                                                 </div>

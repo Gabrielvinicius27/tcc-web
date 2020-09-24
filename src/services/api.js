@@ -4,7 +4,7 @@ import {getToken} from "./auth"
 
 // URL da API
 const api = axios.create({
-    baseURL: "http://127.0.0.1:3333"
+    baseURL: "https://estoque-inteligente-cefsa.herokuapp.com"
 });
 
 // Autorização da API para consultas restritas da API

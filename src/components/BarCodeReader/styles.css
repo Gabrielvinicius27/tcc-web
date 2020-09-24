@@ -1,0 +1,34 @@
+#barCodeReaderButtonLer{
+    margin-top:10px;
+    height:50px;
+    width:140px;
+    background:#187BCD;
+    font: 400 1.2rem Montserrat;
+    border:none;
+    color:#eee; 
+    cursor:pointer;
+    transition: background 0.4s;
+}
+#barCodeReaderButtonLer:hover{
+    background: #1034A6;
+}
+
+#barCodeReaderButtonCancelar{
+    margin-top:10px;
+    margin-left: 20px;
+    height:50px;
+    width:140px;
+    background:#ff6961;
+    font: 400 1.2rem Montserrat;
+    border:none;
+    color:#eee; 
+    cursor:pointer;
+    transition: background 0.4s;
+}
+#barCodeReaderButtonCancelar:hover{
+    background-color:#c21807
+}
+video{
+    background: #eeeeee;
+    border-radius:0.8rem;
+}

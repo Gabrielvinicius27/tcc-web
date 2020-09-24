@@ -1,0 +1,200 @@
+.formCadastro{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    min-width: 700px;
+    z-index: 2;
+}
+
+.formCadastro h1{
+    font: 600 2.5rem Poppins;
+    background: none;
+    color:#333;
+}
+
+.formCadastro h2{
+    font: 600 1.5rem Montserrat;
+    background: none;
+    color:#333;
+}
+
+.formCadastro form{
+    display:flex;
+    flex-direction:row;
+    margin-top: 3rem;
+    width: 80%;
+}
+
+.formCadastro #barCodeReader{
+    display:flex;
+    flex-direction: column;
+    margin-top: 5px;
+    padding-left: 5rem;
+}
+
+.formCadastro form #inputBlock,
+.formCadastro form #shownInputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.formCadastro form #shownInputs .imageUploadCard{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0px solid #000000;
+    border-radius:0.8rem;
+    background:#ffffff;
+    width:40rem;
+    height:220px;
+    padding: 5px;
+    margin: 8px 0;
+}
+
+input[type='file'] {
+    display: none
+}
+
+.formCadastro form #shownInputs .imageUploadCard label {
+    background-color:#187BCD;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    padding: 6px 20px
+}
+
+.formCadastro form #shownInputs .imageUploadCard input{
+    border: none;
+}
+.formCadastro form #shownInputs .imageUploadCard img{
+    height: 150px;
+    width: 150px;
+}
+
+.formCadastro #codeInput{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+}
+
+.formCadastro #codeInput button{
+    margin-left: 2rem;
+    height: 50px;
+    background:#187BCD;
+    font: 400 1.2rem Montserrat;
+    border:none;
+    color:#eee; 
+    cursor:pointer;
+    transition: background 0.4s;
+    
+}
+
+.formCadastro #codeInput button:hover{
+    background: #1034A6;
+}
+
+.formCadastro label{
+    font: 600 1.2rem Montserrat;
+    background: none;
+    color:#333; 
+}
+
+.formCadastro input
+{
+    font: 400 1.2rem Montserrat;
+    height: 50px;
+    width:40rem;
+    border:1px solid #555;
+    border-radius:0.8rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.formCadastro input:focus {
+    border: 3px solid #1089ff;
+}
+
+.formCadastro #inputBlock #codeInput #readOnly:read-only{
+    background-color: #aaa;
+    border: 1px solid #888;
+}
+
+.formCadastro #inputBlock #codeInput #readOnly:focus{
+    border: 1px solid #888;
+}
+
+@media screen and (max-width:700px){
+    .formCadastro
+    {
+        margin-top:50px;
+        min-width: 300px;
+        max-width: 600px;
+        height: 713px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    .formCadastro h1{
+        font: 600 2rem Poppins;
+        background: none;
+        color:#333;
+    }
+    .formCadastro h2{
+        font: 600 1rem Montserrat;
+        background: none;
+        color:#333;
+    }
+    
+    .formCadastro form{
+        display:flex;
+        flex-direction:row;
+        margin-top: 3rem;
+        width: 100%;
+    }
+    
+    .formCadastro #barCodeReader{
+        display:flex;
+        flex-direction: column;
+        margin-top: 5px;
+        padding-left: 0;
+    }
+    .formCadastro form #inputBlock{
+        display: flex;
+        flex-direction: column;
+    }
+    .formCadastro label{
+        font: 600 1rem Montserrat;
+        background: none;
+        color:#333; 
+    }
+    .formCadastro input{
+        font: 400 1rem Montserrat;
+        height: 50px;
+        width:22rem;
+        border:1px solid #555;
+        border-radius:0.8rem;
+        padding: 12px 20px;
+        margin: 8px 0;
+    }
+    .formCadastro #codeInput{
+        display:flex;
+        flex-direction: column;
+        margin-top: 5px;
+        padding-left: 0;
+        width: 22rem;
+    }
+    .formCadastro #codeInput button{
+        height: 30px;
+        width:22rem;
+        margin-left: 0px;
+        font: 400 1rem Montserrat;
+    }
+
+    .formCadastro form #shownInputs .imageUploadCard{
+        width:22rem;
+    }
+}

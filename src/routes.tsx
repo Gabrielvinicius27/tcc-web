@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch,Redirect} from 'react-router-dom';
 import {isAuthenticated} from "./services/auth";
 import LoginPage from './pages/LoginPage';
 import MainPage from './pages/MainPage';
+import AppPage from './pages/AppPage';
 
 interface IProps{
     path:string
@@ -29,7 +30,8 @@ const Routes = () => {
             <Switch>
                 <Route path='/' exact component={LoginPage}/>
                 <PrivateRoute path="/main" component={MainPage}/>
-                <Route patch="*" component={()=><h1>Page not Found</h1>}/>
+                <Route path='/app' component={AppPage}/>
+                <Route path="*" component={()=><h1>Page not Found</h1>}/>
             </Switch>      
         </BrowserRouter>
     )

@@ -14,6 +14,8 @@ import "./styles.css";
 // Services - programas com funções que irão no ajudar
 import api from '../../services/api';
 import { login } from '../../services/auth';
+import LoadingIndicator from '../../components/LoadingIndicator';
+import { trackPromise } from 'react-promise-tracker';
 
 // Função Pagina de Login
 function LoginPage (){
@@ -36,10 +38,11 @@ function LoginPage (){
         else{
             setError("");
             // Chamada da API para conseguir o token de acesso
+            
             try{
                 // Se usuário e senha coincidirem com usuário e senha cadastrados então 
                 // response.data.token irá conter o token de acesso, caso contrario algum erro acontece
-                const response = await api.post("/sessions", {email,password});
+                const response = await trackPromise(api.post("/sessions", {email,password}));
                 login(response.data.token);
                 history.push("/main");
             }catch(err){
@@ -54,6 +57,7 @@ function LoginPage (){
             <img src={backgroundImg} alt="Supermercado"/>
             <div id = "fake-form-background"></div>
             <form onSubmit={handleLogin} id = "form-login-page">
+                <LoadingIndicator/>
                 <div id='img-logo'/>
                 {error && <p>{error}</p>}
                 <input type="email"
