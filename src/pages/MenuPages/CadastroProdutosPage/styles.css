@@ -37,6 +37,7 @@
 .formCadastro form #shownInputs{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .formCadastro form #shownInputs .imageUploadCard{
@@ -80,7 +81,7 @@ input[type='file'] {
     width:100%;
 }
 
-.formCadastro #codeInput button{
+.formCadastro #inputBlock button{
     margin-left: 2rem;
     height: 50px;
     background:#187BCD;
@@ -91,8 +92,13 @@ input[type='file'] {
     transition: background 0.4s;
     
 }
+.formCadastro #inputBlock #shownInputs button{
+    margin-left:0;
+    margin-top: 20px;
+    width:40rem;
+}
 
-.formCadastro #codeInput button:hover{
+.formCadastro #inputBlock button:hover{
     background: #1034A6;
 }
 
@@ -115,6 +121,34 @@ input[type='file'] {
 
 .formCadastro input:focus {
     border: 3px solid #1089ff;
+    background:aliceblue;
+}
+
+.nobutton{
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+}
+.nobutton::-webkit-inner-spin-button, 
+.nobutton::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
+.formCadastro #inputBlock #shownInputs .number input{
+    width:12rem;
+}
+.formCadastro #inputBlock #shownInputs .number select{
+    position: relative;
+    width:5rem;
+    height:50px;
+    font: 400 1.2rem Montserrat;
+    background-color: #1089ff;
+    border:none;
+    margin-left:2rem;
+    color:#eeeeee;
+}
+.formCadastro #inputBlock #shownInputs .number option:not(:checked){
+    color:#444444;
 }
 
 .formCadastro #inputBlock #codeInput #readOnly:read-only{
@@ -126,6 +160,12 @@ input[type='file'] {
     border: 1px solid #888;
 }
 
+form #inputBlock .requiredInput::after,
+form #inputBlock .requiredInput .shownInputs::after{
+    content: " *";
+    font: 600 1.4rem Montserrat;
+    color: #1089ff 
+}
 @media screen and (max-width:700px){
     .formCadastro
     {
@@ -187,7 +227,14 @@ input[type='file'] {
         padding-left: 0;
         width: 22rem;
     }
-    .formCadastro #codeInput button{
+    .formCadastro #inputBlock button{
+        height: 30px;
+        width:22rem;
+        margin-left: 0px;
+        font: 400 1rem Montserrat;
+        margin-bottom: 20px;
+    }
+    .formCadastro #inputBlock #shownInputs button{
         height: 30px;
         width:22rem;
         margin-left: 0px;

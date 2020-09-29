@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React from 'react'
 import {BrowserMultiFormatReader, NotFoundException} from '@zxing/library';
 import "./styles.css"
 
@@ -7,30 +7,31 @@ interface props{
 }
 
 const BarCodeReader: React.FC<props> = ({addCode}) => {
-    const[Ler, setLer]= useState(true);
-    const[code, setCode]= useState("000");
-    const[deviceId,setDeviceId] = useState("-");
     const codeReader = new BrowserMultiFormatReader();
     let selectedDeviceId:string;
     
     window.addEventListener('load',function(){
-        const successCallback = () => {return(console.log("Allowed"))}
         const errorCallback = () => {return(console.log("NotAllowed"))}
         navigator.mediaDevices.getUserMedia({video:true})
-        .then(successCallback, errorCallback);
-        codeReader.listVideoInputDevices()
-        .then(videoInputDevices => {
-            selectedDeviceId = videoInputDevices[0].deviceId; 
+        .then(mediaStream => {
+            console.log("Allowed");
+            const stream = mediaStream;
+            const tracks = stream.getTracks()
+            tracks[0].stop();
+            codeReader.listVideoInputDevices()
+                .then(videoInputDevices => {
+                    selectedDeviceId = videoInputDevices[0].deviceId; 
+                    this.document.getElementById("barCodeReaderButtonLer")?.addEventListener("click",function(){
+                        lerCode()
+                    })
+                    this.document.getElementById("barCodeReaderButtonCancelar")?.addEventListener("click",function(){
+                        cancelaCode()
+                    })
+                })
+                .catch(err => console.error(err));
+                    
+                }, errorCallback);
         
-            setDeviceId(selectedDeviceId)
-            this.document.getElementById("barCodeReaderButtonLer")?.addEventListener("click",function(){
-                lerCode()
-            })
-            this.document.getElementById("barCodeReaderButtonCancelar")?.addEventListener("click",function(){
-                cancelaCode()
-            })
-        })
-        .catch(err => console.error(err));
     })
     
 
@@ -44,11 +45,9 @@ const BarCodeReader: React.FC<props> = ({addCode}) => {
               console.error(err)
             }
         })
-        setLer(true);
     }
     const cancelaCode = () =>{
         codeReader.reset()
-        setLer(false);
     }
 
            

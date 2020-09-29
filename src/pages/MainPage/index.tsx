@@ -1,7 +1,7 @@
 import React from 'react';
 import "./styles.css"
 import SideBarMenu from '../../components/SideBarMenu';
-import {BrowserRouter, Route, Switch,Redirect} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import CadastroEstoquePage from '../MenuPages/CadastroEstoquePage';
 import CadastroProdutosPage from '../MenuPages/CadastroProdutosPage';
 
