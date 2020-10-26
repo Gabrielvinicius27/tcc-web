@@ -52,7 +52,7 @@ const BarCodeReader: React.FC<props> = ({addCode}) => {
 
            
     return(
-        <main className="wrapper">
+        <main className="mainBarCodeReader">
             <video
                 id="video"
                 width="300"
@@ -60,8 +60,7 @@ const BarCodeReader: React.FC<props> = ({addCode}) => {
             ></video>
             <div>
                 <button id="barCodeReaderButtonLer">Ler</button>
-                <button id="barCodeReaderButtonCancelar">Cancelar</button>
-                         
+                <button id="barCodeReaderButtonCancelar">Cancelar</button>      
             </div>
         </main>
     )

@@ -1,0 +1,190 @@
+/*------------------------------------------------------*/
+/*Estilização global telas do menu*/
+/*------------------------------------------------------*/
+.mainDivPages{
+    display: flex;
+    flex-direction:column;
+    background-color: #eeee;
+    border-radius: 2rem;
+    margin:0;
+    margin-top:5rem;
+    margin-bottom: 5rem;
+    padding: 1rem;
+}
+.mainDivPages div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    margin: 8px 0;
+    
+}
+
+.mainDivPages .divHeader{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.mainDivPages h1{
+    font: 600 2.5rem Poppins;
+    background: none;
+    color:#333;
+    margin-bottom: 1rem;
+}
+
+.mainDivPages h2{
+    font: 600 1.5rem Montserrat;
+    background: none;
+    color:#333;
+    margin:0;
+} 
+
+.mainDivPages form{
+    display:flex;
+    flex-direction:column;
+    margin-top: 3rem;
+}
+
+/*------------------------------------------------------*/
+/*Estilização global de inputs e label nas telas do menu*/
+/*------------------------------------------------------*/
+.mainDivPages input{
+    font: 400 1.2rem Montserrat;
+    height:50px;
+    width:50rem;
+    border:1px solid #555;
+    border-radius:0.8rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+.mainDivPages input:focus{
+    border: 3px solid #1089ff;
+    background:aliceblue;
+}
+
+/*Estilização de Inputs read-only*/
+.mainDivPages input:read-only{
+    width:50rem;
+    background-color: #aaa;
+    border: 1px solid #888;
+}
+.mainDivPages input:read-only:focus{
+    border: 1px solid #888;
+}
+
+.mainDivPages .input_n_select{
+    flex-direction: row;
+    justify-content: flex-start;
+}
+/*Estilização de div com input e select junto*/
+.mainDivPages .input_n_select input{
+    width:12rem;
+}
+.mainDivPages select{
+    position: relative;
+    width:5rem;
+    height:50px;
+    font: 400 1.2rem Montserrat;
+    background-color: #1089ff;
+    border:none;
+    margin-left:2rem;
+    color:#eeeeee;
+}
+.mainDivPages option:not(:checked){
+    color:#444444;
+}
+
+/*.nobutton serve para tirar o spin do input tipo number */
+.nobutton{
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+}
+.nobutton::-webkit-inner-spin-button, 
+.nobutton::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
+.mainDivPages label{
+    font: 600 1.2rem Montserrat;
+    background: none;
+    color:#333; 
+    margin-top:1rem;
+}
+
+/*Estilização de label dos inputs obrigatórios*/
+.mainDivPages form .requiredInput::after{
+    content: " *";
+    font: 600 1.4rem Montserrat;
+    color: #1089ff 
+}
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+
+/*----------------------------------------------*/
+/*Estilização global de botões nas telas do menu*/
+/*----------------------------------------------*/
+.mainDivPages button{
+    height: 50px;
+    width:50rem;
+    background:#187BCD;
+    font: 400 1.2rem Montserrat;
+    border:none;
+    color:#eee; 
+    cursor:pointer;
+    transition: background 0.4s;   
+    margin-left:0;
+    margin-top: 20px;
+}
+.mainDivPages button:hover{
+    background: #1034A6;
+}
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+
+
+/*----------------------*/
+/*Layout Mobile*/
+/*----------------------*/
+@media screen and (max-width:1000px){
+    .mainDivPages
+    {
+        margin-top:50px;
+        min-width: 300px;
+        max-width: 600px;
+        width: 93vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    .mainDivPages h1{
+        font: 600 2rem Poppins;
+    }
+    .mainDivPages h2{
+        font: 600 1rem Montserrat;
+    }
+    .mainDivPages label{
+        font: 600 1rem Montserrat;
+    }
+    .mainDivPages input{
+        width:22rem;
+    }
+    .mainDivPages input:read-only{
+        width:22rem;
+    }
+    .mainDivPages button{
+        height: 30px;
+        width:22rem;
+        margin-left: 0px;
+        font: 400 1rem Montserrat;
+        margin-bottom: 20px;
+    }
+
+}
+

@@ -1,0 +1,17 @@
+
+#datamatrixDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border:1px solid black;
+    border-radius:0.8rem;
+    padding:5px;
+    width: 15rem;
+}
+#textDiv{
+    display: inline;
+    width:5rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+

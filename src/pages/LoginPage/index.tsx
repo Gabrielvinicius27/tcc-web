@@ -57,7 +57,7 @@ function LoginPage (){
             <img src={backgroundImg} alt="Supermercado"/>
             <div id = "fake-form-background"></div>
             <form onSubmit={handleLogin} id = "form-login-page">
-                <LoadingIndicator/>
+                <LoadingIndicator texto="Login.."/>
                 <div id='img-logo'/>
                 {error && <p>{error}</p>}
                 <input type="email"

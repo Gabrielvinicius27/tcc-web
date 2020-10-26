@@ -10,13 +10,14 @@ const GlobalStyle = createGlobalStyle`
   outline: 0;
 }
 body, html {
-  background: #eee;
+  background-color:none;
   font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   height: 100%;
   width: 100%;
 }
+
 `;
 
 export default GlobalStyle;

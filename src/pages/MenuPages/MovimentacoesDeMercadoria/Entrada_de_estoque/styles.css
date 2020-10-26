@@ -1,0 +1,11 @@
+.mainDivPages .divCadastroProdutos{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:0;
+}
+@media screen and (max-width:1000px){
+    .mainDivPages .divCadastroProdutos{
+        flex-direction: column; 
+    }
+}

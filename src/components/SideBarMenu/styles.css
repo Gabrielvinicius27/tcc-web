@@ -1,17 +1,18 @@
 .mainSideBarMenu{
     display:flex;
     flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    transition: width 0.2s;
 }
 .hidded-side-bar{
     background:#1167B1;
     width:0px;
-    height:100vh;
 }
 .sidebar{
-    min-width: 200px;
-    width:240px;
-    max-width: 240px;
-    height: 100vh;
+    width:300px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background:#1167B1;
     margin:0;
@@ -20,14 +21,16 @@
     background:#1167B1;
     color:#eeeeee;
     height: 46px;
-    border-bottom: 0px solid #1089ff;
     transition: background 0.5s
+}
+.item ListItem{
+    height: 50px;
 }
 .item:hover{
     background:#1E1E2C
 }
 .item-text{
-    font: 400 1.2rem Montserrat;
+    font: 400 1rem Montserrat;
     font-weight: bold;
 }
 .sub-item{
@@ -41,10 +44,11 @@
 .button{
     display: flex;
     width: 50px;
-    height: 48px;
+    height: 46px;
     align-items: left;
     border: none;
     border-radius: 0.2rem;
+    background:none;
 }
 .show{
     margin:0;
@@ -73,11 +77,4 @@
 }
 .hide:hover{
     width:100%
-}
-@media screen and (max-width: 700px){
-    .mainSideBarMenu{
-        position: absolute;
-        z-index: 2;
-    }
-    
 }

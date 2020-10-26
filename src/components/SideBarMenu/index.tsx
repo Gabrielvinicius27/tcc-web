@@ -52,6 +52,7 @@ const SideBarMenu: React.FC<itemProps> = ({data,...rest}) => {
         window.location.reload();
     }
 
+    
     return (
         <main className="mainSideBarMenu">
             {show?(<div className="sidebar">
