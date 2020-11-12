@@ -1,28 +1,22 @@
-#mainMenuPages{
-    display:flex;
-    flex-direction:row;
-    padding:10px;
-}
-.formMainMenuPages{
-    display:flex;
-    flex-direction:column;
-}
-.formMainMenuPages input{
-    width: 80%;
-    height: 4rem;
-    padding: 12px 20px;
-    margin: 8px 0;
-    margin-top:1rem;
-    box-sizing: border-box;
-    border: 1px solid #444;
+
+#selectCadastroEstoque{
+    margin-left: 0;
     border-radius: 0.8rem;
-    color:'#eeeeee';
-    transition: border 0.8s;
-    font: 400 1.4rem Montserrat;
+    width: 50rem;
+    transition: all 0.2s;
+    background-color: aliceblue;
+    color:#111111;
+    border: 1px solid #444444;
 }
 
-.h1Estoque{
-    background:#eeeeee;
-    color:#444;
-    font: 700 1.6rem Poppins;
- }
+#selectCadastroEstoque:hover{
+    border: 3px solid #1089ff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+@media screen and (max-width:1000px){
+    #selectCadastroEstoque{
+        width: 22rem;
+    }
+}

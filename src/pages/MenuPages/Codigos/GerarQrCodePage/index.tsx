@@ -8,16 +8,6 @@ function GerarQrCodePage(){
     const [valueQRCode, setValueQRCode] = useState('');
     const [selectQR, setSelectQR] = useState(true)
 
-    const selection = async(valor:string) => {
-        
-        if(valor==="QRcode"){
-            setSelectQR(true)
-        }
-        if(valor==="DataMatrix"){
-            setSelectQR(false)
-        }
-        console.log(selectQR)
-    }
     return(
         <div className='mainDivPages'>
             <div className="divHeader">
@@ -32,7 +22,7 @@ function GerarQrCodePage(){
                                 onChange={(e)=>setValueQRCode(e.target.value)}>    
                             </input>
                             <select
-                                onChange={(e)=>{selection(e.target.value)}}>
+                                onChange={(e)=>{setSelectQR(!selectQR)}}>
                                 <option value="QRCode">QRcode</option>
                                 <option value="DataMatrix">DataMatrix</option>
                             </select> 
@@ -41,7 +31,7 @@ function GerarQrCodePage(){
                             {selectQR && <QRCode 
                                 value={valueQRCode}
                                 logoImage={logoImage}
-                                size={80}
+                                size={90}
                                 ecLevel='M'>
                             </QRCode>}
                             {!selectQR && <DataMatrixGeneratorComponent 
@@ -50,6 +40,7 @@ function GerarQrCodePage(){
                                 height={"80px"} 
                                 foreColor={"blue"}
                                 backgroundColor="#eeee"
+                                encoding='Base256'
                                 value={valueQRCode}
                                 margin={{bottom:0,top:10,left:0,right:0}}
                                 displayText= {{visibility:false}}>

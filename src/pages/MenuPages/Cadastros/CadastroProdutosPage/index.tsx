@@ -53,7 +53,7 @@ function CadastroProdutosPage(){
             setProdutoExistente(false)
             return
         }
-        if(response.data["0"].barcode == code){
+        if(response.data["0"].barcode === code){
             const data = response.data["0"]
             setProdutoExistente(true);
             setNome(data.nome);

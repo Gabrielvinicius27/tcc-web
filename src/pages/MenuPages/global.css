@@ -83,7 +83,7 @@
 .mainDivPages .input_n_select input{
     width:12rem;
 }
-.mainDivPages select{
+.mainDivPages .input_n_select select{
     position: relative;
     width:5rem;
     height:50px;
@@ -92,6 +92,17 @@
     border:none;
     margin-left:2rem;
     color:#eeeeee;
+}
+.mainDivPages select{
+    position: relative;
+    width:10rem;
+    height:40px;
+    font: 400 1.2rem Montserrat;
+    background-color: #1089ff;
+    border:none;
+    margin-left:2rem;
+    color:#eeeeee;
+    margin-top: 1rem;
 }
 .mainDivPages option:not(:checked){
     color:#444444;
@@ -121,6 +132,16 @@
     font: 600 1.4rem Montserrat;
     color: #1089ff 
 }
+
+.mainDivPages input[type='date']{
+    font: 400 1.2rem Montserrat;
+    height:50px;
+    width:50rem;
+    border:1px solid #555;
+    border-radius:0.8rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
@@ -143,10 +164,44 @@
 .mainDivPages button:hover{
     background: #1034A6;
 }
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
 
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+.list{
+    margin-top: 1rem;
+    background-color:#1E1E2C;
+    border-radius: 0.8rem;
+    list-style-type: none;
+    padding:0rem 4rem 1rem 4rem;
+    width:35rem;
+}
+.list li::before {
+    content: "\2022";
+    color: blue;
+    font-weight: bold;
+    font-size: 2rem;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+.list li{
+    list-style-type:none;
+    font: 600 1rem Montserrat;
+    color:#eeee;
+}
+.pAlert{
+    box-sizing: border-box;
+    border: 1px solid #FF6961;
+    border-radius:0.8rem;
+    width:35rem;
+    padding:1rem;
+    font: 400 1rem Montserrat;
+    font-weight: bold;
+    background:#0B0A08;
+    color:#FF6961;
+    margin-top:1rem;
+}
 
 /*----------------------*/
 /*Layout Mobile*/
@@ -178,6 +233,9 @@
     .mainDivPages input:read-only{
         width:22rem;
     }
+    .mainDivPages input[type='date']{
+        width:22rem;
+    }
     .mainDivPages button{
         height: 30px;
         width:22rem;
@@ -185,6 +243,11 @@
         font: 400 1rem Montserrat;
         margin-bottom: 20px;
     }
-
+    .list{
+        width:22rem;
+    }
+    .pAlert{
+        width:22rem;
+    }
 }
 

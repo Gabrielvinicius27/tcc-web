@@ -7,11 +7,17 @@
     border-radius:0.8rem;
     padding:5px;
     width: 15rem;
+    height: 10rem;
+    background-color: #ffff;
 }
 #textDiv{
     display: inline;
-    width:5rem;
+    width:10rem;
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
-
+@media screen and (max-width:1000px){
+    #datamatrixDiv{
+        width:15rem;
+    }
+}

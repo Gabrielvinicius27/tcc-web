@@ -40,6 +40,10 @@
 #barCodeReaderButtonCancelar:hover{
     background-color:#c21807
 }
+#selectVideoDevice{
+    margin-left:0;
+    width:100%
+}
 video{
     background: #eeeeee;
     border-radius:0.8rem;

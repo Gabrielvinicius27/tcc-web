@@ -1,0 +1,24 @@
+.mainDivPages #divEstoqueGondola{
+    flex-direction: row;
+}
+.mainDivPages #divEstoqueGondola input{
+    width:35rem;
+}
+.mainDivPages .btnEstoqueGondola{
+    width:35rem;
+    align-self: center;
+}
+
+
+@media screen and (max-width:1000px){
+    .mainDivPages #divEstoqueGondola{
+        flex-direction: column; 
+    }
+    .mainDivPages #divEstoqueGondola input{
+        width:22rem;
+    }
+    .mainDivPages .btnEstoqueGondola{
+        width:22rem;
+    }
+
+}

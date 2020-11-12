@@ -4,8 +4,78 @@
     justify-content: center;
     margin:0;
 }
+
+.mainDivPages .multistepForm{
+    height: 22rem;
+    width:50rem;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid #000000;
+    border-radius:0.8rem;
+    background:#1E1E2C;
+}
+.mainDivPages .multistepForm input{
+    width:30rem;
+}
+
+.mainDivPages .multistepForm .setaDireita{
+    background: none;
+    background-image: url('../../../../assets/images/icons/setaDireita.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin:10px;
+    width:50px;
+}
+.mainDivPages .multistepForm .setaEsquerda{
+    background: none;
+    background-image: url('../../../../assets/images/icons/setaEsquerda.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin:10px;
+    width:50px;
+}
+
+.mainDivPages .multistepForm label{
+    color:#eeee;
+}
+
+.mainDivPages .divDot{
+    background-color:none;
+    display:flex;
+    flex-direction: row;  
+}
+.dot {
+    margin:20px;
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s;
+    transition: box-shadow 0.5s;
+}
+
+.mainDivPages #btnGerarPDF{
+    background-color: #88DEB0;
+    width:15rem;
+    border-radius:0.8rem;
+    margin-bottom: 15;
+    transition: background-color 0.5s;
+}
+.mainDivPages #btnGerarPDF:hover{
+    background-color: #288a56;
+}
+
 @media screen and (max-width:1000px){
     .mainDivPages .divCadastroProdutos{
         flex-direction: column; 
+    }
+    .mainDivPages .multistepForm{
+        width:22rem;
+    }
+    .mainDivPages .multistepForm input{
+        width:15rem;
     }
 }
