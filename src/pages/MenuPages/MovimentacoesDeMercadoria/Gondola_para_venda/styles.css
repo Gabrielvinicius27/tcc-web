@@ -1,0 +1,62 @@
+.mainDivPages #divGondolaVenda{
+    flex-direction: row;
+}
+.mainDivPages #divGondolaVenda input{
+    width:35rem;
+}
+.mainDivPages .listVenda{
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 1rem;
+    background-color:#1E1E2C;
+    border-radius: 0.8rem;
+    list-style-type: none;
+    padding:0rem 4rem 1rem 4rem;
+    width:35rem;
+}
+.mainDivPages .listVenda .LIproduto::before {
+    content: "\2022";
+    color: blue;
+    font-weight: bold;
+    font-size: 2rem;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+.mainDivPages .listVenda .LIproduto{
+    flex: 1 0 50%;
+    list-style-type:none;
+    font: 600 1rem Montserrat;
+    color:#eeee;
+    
+}
+.mainDivPages .listVenda .LIpreco{
+    flex: 1 0 25%;
+    list-style-type:none;
+    font: 600 1rem Montserrat;
+    color:#eeee;
+    margin-top:1rem;
+    margin-left:1rem;
+    
+}
+.mainDivPages .btnGondolaVenda{
+    width:35rem;
+    align-self: center;
+}
+
+
+@media screen and (max-width:1000px){
+    .mainDivPages #divGondolaVenda{
+        flex-direction: column; 
+    }
+    .mainDivPages #divGondolaVenda input{
+        width:22rem;
+    }
+    .mainDivPages .listVenda{
+        width:22rem;
+    }
+    .mainDivPages .btnGondolaVenda{
+        width:22rem;
+    }
+}

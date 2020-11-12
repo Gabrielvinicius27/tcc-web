@@ -8,6 +8,7 @@ import GerarQrCodePage from '../MenuPages/Codigos/GerarQrCodePage';
 import EntradaDeEstoque from '../MenuPages/MovimentacoesDeMercadoria/Entrada_de_estoque';
 import backgroundImg from "../../assets/images/icons/backgroundPattern.png"
 import EstoqueParaGondola from '../MenuPages/MovimentacoesDeMercadoria/Estoque_para_gondola';
+import GondolaVenda from '../MenuPages/MovimentacoesDeMercadoria/Gondola_para_venda';
 
 
 const items = [
@@ -18,6 +19,9 @@ const items = [
           },
           {
             name:"estoque-gondola", label:"Colocar Produtos em Exposição", path:"/main/estoqueGondola", fatherIndex:0
+          },
+          {
+            name:"gondola-venda", label:"Vender Produto", path:"/main/gondolaVenda", fatherIndex:0
           },
       ]},
     { name: 'cadastros', label: 'Cadastros', 
@@ -57,6 +61,7 @@ function MainPage(){
             <Switch>
                 <Route path="/main/entradaEstoque" component={EntradaDeEstoque}/>
                 <Route path="/main/estoqueGondola" component={EstoqueParaGondola}/>
+                <Route path="/main/gondolaVenda" component={GondolaVenda}/>
                 <Route path="/main/produtos" component={CadastroProdutosPage}/>
                 <Route path="/main/estoque" component={CadastroEstoquePage}/>
                 <Route path="/main/gerarqrcode" component={GerarQrCodePage}/>

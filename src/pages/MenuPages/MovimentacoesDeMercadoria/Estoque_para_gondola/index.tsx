@@ -18,6 +18,7 @@ function EstoqueParaGondola(){
     const [localExistente, setLocalExistente] = useState(false);
     const [valueCodeProduto, setValueCodeProduto] = useState<any>([]);
     const [produtoExistente, setProdutoExistente] = useState(false);
+    const [codigoIncorreto, setCodigoIncorreto] = useState(false)
 
     const [nomeLocal, setNomeLocal] = useState('');
     const [tipoLocal, setTipoLocal] = useState('');
@@ -108,7 +109,7 @@ function EstoqueParaGondola(){
 
     //Aguarda state show ser alterado para verificar se o produto existe
     useEffect(()=>{
-        if(valueCodeProduto.length===0)return
+        if(valueCodeProduto.length===0 || codigoIncorreto===true)return
         verificaProdutoExistente()
     },[valueCodeProduto])
 
@@ -121,12 +122,16 @@ function EstoqueParaGondola(){
         //Se nada encontrado então local de armazenamento não existe ainda
         //Redireciona para a página de cadastro de local de armazenamento
         if(response.data.length === 0) {
+            setCodigoIncorreto(true)
+            setValueCodeProduto(valueCodeProduto.filter((e:any)=>(e!==valueCodeProduto[valueCodeProduto.length-1])))
+            setTextoAlert('Código não encontrado nos registros')
             setProdutoExistente(false)
             return
         }
         
         //Se produto ainda não registrado então carrega informações
         if(response.data["0"].value_code === valueCodeProduto[valueCodeProduto.length-1]){
+            setTextoAlert('')
             const data = response.data["0"]
 
             setLoteProduto(data.numero_lote);
@@ -146,6 +151,7 @@ function EstoqueParaGondola(){
                 setUnidadeMedidaProduto(data2.unidade_de_medida);
             }
             setProdutoExistente(true);
+            setCodigoIncorreto(false);
             return
         }
     }
@@ -220,7 +226,6 @@ function EstoqueParaGondola(){
                     current = arrayProduto[i];
                     count = 1;
                 }
-                
             }
             
         }
@@ -297,7 +302,7 @@ function EstoqueParaGondola(){
                                 return(
                                 <li>{produto.quantidade+'X '+produto.produto.nome+' '+produto.produto.marca+
                                     ' '+produto.produto.descricao+' '+produto.produto.embalagem+' '+
-                                    produto.produto.conteudo+produto.produto.unidadeMedida}</li>)
+                                    produto.produto.conteudo+produto.produto.unidadeMedida+' Lote: '+produto.produto.lote}</li>)
                             })}
                             </ul>
                         }
