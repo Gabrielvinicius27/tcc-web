@@ -1,0 +1,141 @@
+#dashboard{
+    margin: 0;
+    padding: 0;
+    display:grid;
+    width:50rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "area1 area2"
+        "area3 area3"
+        "area4 area4";
+}
+
+#CimageUploadCard{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius:0.8rem;
+    background:#ffffff;
+    width:50rem;
+    height:100%;
+    padding: 5px;
+}   
+#CimageUploadCard img{
+    height: 200px;
+    width: 200px;
+    
+}
+#divTimeLine{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    grid-area: timeline;
+}
+#divTimeLine Stepper{
+    height: 10px;
+}
+
+
+/*/////////////////////////////*/
+#divDataValidade{
+    margin:0;
+    padding:0;
+    height: 100%;
+    grid-area:area1
+}
+#divDataValidade div{
+    padding:1rem;
+    margin:0;
+    width:90%;
+    height:70%;
+    display: flex;
+    border-radius: 0.8rem;
+    flex-direction: column;
+    
+}
+#divDataValidade label{
+    margin:0;
+    font: 600 1.5rem Montserrat;
+}
+#divDataValidade p{
+    font: 600 0.9rem Montserrat;
+    margin-left: 1rem;
+    align-self: flex-start;
+    position: relative;
+}
+#divDataValidade .pMenor{
+    font: 400 0.7rem Montserrat;
+    margin-left: 1rem;
+    align-self: center;
+}
+/*/////////////////////////////*/
+
+/*//////////////////////////////////////////////////*/
+#divCadastroMetaDataValidade{
+    margin:0;
+    padding:0;
+    height: 100%;
+    grid-area:area2
+} 
+#divCadastroMetaDataValidade div{
+    padding:1rem;
+    width:90%;
+    height:90%;
+    display: flex;
+    border-radius: 0.8rem;
+    flex-direction: column;
+    background:#1E1E2C;
+} 
+#divCadastroMetaDataValidade p{
+    align-self: flex-start;
+    font: 400 0.9rem Montserrat;
+    color:#cecece
+}  
+#divCadastroMetaDataValidade .pSuccess{
+    width:80%;
+    align-self:center;
+    font: 400 0.6rem Montserrat;
+    margin-bottom: 1rem;
+}
+#divCadastroMetaDataValidade input{
+    margin-top: 1rem;
+    width:80%
+}  
+#divCadastroMetaDataValidade button{
+    width:80%;
+    margin-bottom: 1rem;
+}    
+/*//////////////////////////////////////////////////*/
+#gauge{
+    margin-top:2rem;
+    padding:0;
+    grid-area: area3;
+    background-color: rgba(128, 128, 128, 0.267);
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+#gauge2{
+    margin-top:2rem;
+    margin:0;
+    padding:0;
+    background:none;
+    grid-area: area4;
+    background-color: rgba(128, 128, 128, 0.267);
+    border-radius: 0.8rem;
+}
+
+@media screen and (max-width:1000px){
+    #dashboard{
+        width:25rem;
+    }
+    #CimageUploadCard{
+        
+        width:22rem;
+      
+    }   
+}

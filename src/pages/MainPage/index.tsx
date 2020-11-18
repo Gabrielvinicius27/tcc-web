@@ -9,6 +9,7 @@ import EntradaDeEstoque from '../MenuPages/MovimentacoesDeMercadoria/Entrada_de_
 import backgroundImg from "../../assets/images/icons/backgroundPattern.png"
 import EstoqueParaGondola from '../MenuPages/MovimentacoesDeMercadoria/Estoque_para_gondola';
 import GondolaVenda from '../MenuPages/MovimentacoesDeMercadoria/Gondola_para_venda';
+import ConsultaProduto from '../MenuPages/Consultas/Consulta_Produtos';
 
 
 const items = [
@@ -36,16 +37,10 @@ const items = [
     { name: 'consultas', label: 'Consultas', 
       items:[
           {
-            name:"consulta-produtos", label:"Consulta de Produtos", path:"/main/consultaprod", fatherIndex:0
+            name:"consulta-produtos", label:"Consulta de Produtos", path:"/main/consultaProduto", fatherIndex:0
           },
       ]},
-    { name: 'codigos', label: 'Códigos',
-      items:[
-          {
-              name:"gerar-qrcode", label:"Gerar QR Code", path:"/main/gerarqrcode", fatherIndex:1
-          }
-      ]},
-    { name: 'relatorios', label: 'Relatórios' },
+  
   ]
 
 function MainPage(){
@@ -65,6 +60,7 @@ function MainPage(){
                 <Route path="/main/produtos" component={CadastroProdutosPage}/>
                 <Route path="/main/estoque" component={CadastroEstoquePage}/>
                 <Route path="/main/gerarqrcode" component={GerarQrCodePage}/>
+                <Route path="/main/consultaProduto" component={ConsultaProduto}></Route>
             </Switch>      
             </BrowserRouter>
           </div>
