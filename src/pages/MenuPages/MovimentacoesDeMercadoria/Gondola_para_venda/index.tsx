@@ -189,12 +189,12 @@ function GondolaVenda(){
                 {
                     data.push({
                         "status":"Vendido",
-                        "local": "Desconhecido"
+                        "local": "Vendidos"
                     })
                     dataStatus.push({
                         "value_code":valueCode, 
                         "status":"Vendido",
-                        "local":"Desconhecido"
+                        "local":"Vendidos"
                     })
                 }   
             })

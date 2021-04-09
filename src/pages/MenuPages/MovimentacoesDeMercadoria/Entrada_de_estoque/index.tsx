@@ -404,13 +404,13 @@ function EntradaDeEstoque(){
                         "numero_lote":lote,
                         "data_validade":dataValidade,
                         "status":'Em estoque',
-                        "local": 'Estoque 1',
-                        "descricao": 'teste inicial'
+                        "local": 'Estoque de Entrada',
+                        "descricao": 'Indefinido'
                     })
                     dataStatus.push({
                         "value_code":valueCode.valueCode, 
                         "status":'Em estoque',
-                        "local": 'Estoque 1',
+                        "local": 'Estoque de Entrada',
                     })
                 }   
             })
