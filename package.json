@@ -20,7 +20,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-loader-spinner": "^3.1.0",
     "@zxing/library": "^0.17.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "barcoder": "^2.0.1",
     "d3-format": "^2.0.0",
     "d3-scale": "^3.2.3",
@@ -41,6 +41,8 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.1",
     "styled-components": "^5.1.1",
+    "tableau-api": "^2.2.3",
+    "tableau-react-embed": "^1.1.0",
     "typescript": "^3.9.7"
   },
   "scripts": {

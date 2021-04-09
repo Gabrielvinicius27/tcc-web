@@ -10,9 +10,15 @@ import backgroundImg from "../../assets/images/icons/backgroundPattern.png"
 import EstoqueParaGondola from '../MenuPages/MovimentacoesDeMercadoria/Estoque_para_gondola';
 import GondolaVenda from '../MenuPages/MovimentacoesDeMercadoria/Gondola_para_venda';
 import ConsultaProduto from '../MenuPages/Consultas/Consulta_Produtos';
-
+import Test from '../../components/TableauComponent'
 
 const items = [
+    { name: 'dashboard', label: 'Dashboards', 
+    items:[
+        {
+          name:"dashboard-tableau", label:"Relatório principal", path:"/main/", fatherIndex:0
+        },
+    ]},
     { name: 'movimentacao', label: 'Movimentação de Mercadorias', 
       items:[
           {
@@ -42,18 +48,18 @@ const items = [
       ]},
   
   ]
-
 function MainPage(){
     return(
         <div className="main">  
-          
           <h1>Estoque Inteligente</h1>
           <div className="divSidebar">
             <SideBarMenu data={items}/>
           </div>
           <div className="divScreens">
+            
             <BrowserRouter>
             <Switch>
+                <Route path="/main" exact component={Test}/>
                 <Route path="/main/entradaEstoque" component={EntradaDeEstoque}/>
                 <Route path="/main/estoqueGondola" component={EstoqueParaGondola}/>
                 <Route path="/main/gondolaVenda" component={GondolaVenda}/>
