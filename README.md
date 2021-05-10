@@ -1,3 +1,14 @@
+## Front-end TCC
+Este é o código do Front-end do meu TCC, é possível acessar pelo endereço https://app-estoque-inteligente-cefsa.herokuapp.com/
+Foi desenvolvido em React JS.
+
+É um sistema de monitoramento de estoque e temperatura de supermecado, é possível cadastrar produtos, ler código de barras, 
+gerar QR Codes e ver dashboards do Tableau embarcados na própria aplicação
+
+
+Abaixo está uma descrição do próprio React JS de como executar projetos feitos em React, basta seguir os passos e testar! 
+Antes de executar é necessário fazer um npm install para instalar as dependencias do projeto, isto pode levar um tempo!!!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
